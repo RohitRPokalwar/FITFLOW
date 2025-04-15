@@ -1,0 +1,220 @@
+/* Base layout */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #90caf9;
+}
+
+/* Form elements */
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #3d7eff;
+    color: white;
+    border: 2px solid transparent;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    border: 2px solid #00f0ff;
+    /* Neon cyan border */
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+    /* Glow effect */
+}
+
+
+
+
+
+/* List items for bookings */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li strong {
+    color: #81c784;
+}
+
+li button {
+    background-color: #e53935;
+}
+
+li button:hover {
+    background-color: #c62828;
+}
+
+/* Add to your existing styles.css */
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    background-color: #1f1f1f;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #292929;
+    transform: scale(1.05);
+}
+
+.card {
+    background-color: #2b2b2b;
+    color: #ffffff;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .card {
+        padding: 0.8rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    form div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input[type="date"],
+    input[type="time"] {
+        width: 100%;
+        margin-top: 0.3rem;
+    }
+}
+
+.gym-animation {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.animated-icon {
+    animation: bounce 1.2s infinite ease-in-out;
+    transform-origin: center;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+    }
+
+    50% {
+        transform: translateY(-10px) scale(1.1);
+    }
+}
+
+/* Neon effect for inputs and select on hover/focus */
+input[type="date"],
+input[type="time"],
+select {
+    background: #2c2c2c;
+    color: #fff;
+    border: 2px solid transparent;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover,
+select:hover {
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 8px #00f0ff, 0 0 16px #00f0ff;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+select:focus {
+    outline: none;
+    border: 2px solid #00f0ff;
+    box-shadow: 0 0 10px #00f0ff, 0 0 20px #00f0ff;
+}
+
+input[type="date"]::placeholder,
+input[type="time"]::placeholder {
+    font-size: 0.85rem;
+    /* Adjust size as needed */
+    color: #bbb;
+    /* Optional: make it a bit lighter */
+}
